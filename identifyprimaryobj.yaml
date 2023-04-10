@@ -1,0 +1,19 @@
+config:
+    image_path: "resized_image.png"
+    threshold_scope: "Global"  #"Adaptive"/["Global","Adaptive"]
+    Global: { "name_objects": "yeast",
+              "size_range": [25, 90],
+              "exclude_size": True,
+              "exclude_border_objects": True,
+              "global_operation": "Manual",  #["Minimum Cross-Entropy", "Otsu", "Robust Background", "Measurement", "Manual"]
+              "manual_threshold": 0.001,
+              "threshold_smoothing_scale": 1.3488,
+              "unclump_method": "shape", #["shape"/ "intensity"]
+              "watershed_method": "shape", #["shape"/ "intensity"/"propagate"]
+              "automatic_smoothing": True,
+              "automatic_suppression": True,
+              "low_res_maxima": True,     #Speed up by using lower-resolution image to find local maxima?
+              "fill_holes": "both",
+              "want_plot_maxima": False,
+              "limit_choice": "continue" #continue/erase
+                       }
